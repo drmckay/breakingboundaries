@@ -1,0 +1,50 @@
+---
+title: Welcome to Breaking Boundaries
+description: On this site I share my journey on Windows Security features, feel the fun!
+template: splash
+hero:
+  tagline: This is a research blog of Windows Security features.
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Let's get started
+      link: /
+      icon: right-arrow
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+## Research areas
+
+<CardGrid stagger>
+	<Card title="Process boundary" icon="setting">
+		A process boundary isolates each process’s memory and resources, preventing interference from other processes.
+	</Card>
+	<Card title="AppContainer boundary" icon="setting">
+		An AppContainer-based sandbox process cannot access or tamper with code and data outside of the sandbox based on the container capabilities.
+	</Card>
+	<Card title="Session boundary" icon="seti:clock">
+		A session boundary isolates user sessions, ensuring processes and data in one session cannot interfere with or access those in another.
+	</Card>
+	<Card title="User boundary" icon="document">
+		A user boundary isolates each user's data, settings, and processes, preventing unauthorized access between users.
+	</Card>
+	<Card title="Kernel boundary" icon="rocket">
+		A kernel boundary separates user-mode processes from the kernel, restricting direct access to critical system resources.
+	</Card>
+	<Card title="Virtual Machine boundary" icon="rocket">
+		An unauthorized Hyper-V guest virtual machine cannot access or tamper with the code and data of another guest virtual machine; this includes Hyper-V Isolated Containers.
+	</Card>
+	<Card title="Network boundary" icon="rocket">
+		An unauthorized network endpoint cannot access or tamper with the code and data on a customer’s device.
+	</Card>
+	<Card title="Virtualization-Based Security (VBS) Boundary" icon="shield">
+		Data and code within a VBS Trustlet or Enclave cannot be accessed or tampered with by code executing outside of the VBS Trustlet or Enclave if not explicitly shared.
+	</Card>
+	<Card title="Virtual Secure Mode (VSM) Boundary" icon="shield">
+		Data and code marked as private within a Virtual Trust Level (VTL) cannot be accessed or tampered with by code executing inside a lower VTL.
+	</Card>
+	<Card title="Web Browser Boundary" icon="browser">
+		An unauthorized website cannot violate the same-origin policy, nor can it access or tamper with the native code and data of the Microsoft Edge web browser sandbox.
+	</Card>
+</CardGrid>
